@@ -7,10 +7,7 @@
 ## Cargar todas las librerías necesarias con pacman
 
 ```R
-pacman::p_load(tidyverse, rnaturalearth, rnaturalearthdata, sf, viridis)
-library(cowplot)
-library(RColorBrewer) # Paletas de colores, Info en https://r-graph-gallery.com/38-rcolorbrewers-palettes.html
-library(paletteer) # Paletas de colores, Info en https://pmassicotte.github.io/paletteer_gallery/
+pacman::p_load(rnaturalearth, rnaturalearthdata, sf, viridis, cowplot, RColorBrewer, paletteer)
 ```
 
 ## 7. FUNCIONES DE dyplr
