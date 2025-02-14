@@ -7,17 +7,15 @@
 ## Cargar todas las librerías necesarias con pacman
 
 ```R
-pacman::p_load(rnaturalearth, rnaturalearthdata, sf, viridis, cowplot, RColorBrewer, paletteer)
+pacman::p_load(dplyr)
 ```
 
 ## 7. FUNCIONES DE dyplr
+Recordemos que usamos %>% (pipe) nos sirve para concatenar funciones
 
 ```R
-library(tidyverse)
-library(datasets)
-iris = iris
-View(iris)
-str(iris)
+iris <-  as_tibble(iris)
+iris
 ```
 
 ### select()
