@@ -85,7 +85,6 @@ iris %>% arrange(Sepal.Length)
 # ordena filas de una columna en orden descendennte
 iris %>% arrange(desc(Sepal.Length))
 # ordena filas de varias columnas
-iris %>% arrange(Sepal.Length)
 iris %>% arrange(Sepal.Length, Sepal.Width)
 ```
 
