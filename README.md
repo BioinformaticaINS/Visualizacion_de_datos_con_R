@@ -1,6 +1,6 @@
 # Visualización de datos con R
 
-- Título: ggplot2
+- Título: dplyr y ggplot2
 - Autor: Dámaris Esquén
 - Fecha: 14/02/2025
 
