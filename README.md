@@ -115,14 +115,12 @@ iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width,
                  .keep = "none") %>% head()
 ```
 
-### 1.6 group_by(): Para agrupar, util para hacer calculos en datos agrupados
+### 1.6 group_by(): Para agrupar
+Es util para hacer calculos en datos agrupados, pero lo veremos mejor al usa con la funcion summarize 
 
 Sintaxis: group_by(x, column1, column2, ...)
 ```R
 iris %>% group_by(Species)
-# Puedo hacer calculos de los datos agrupados
-iris %>% group_by(Species) %>% mean()
-iris %>% group_by(Species) %>% mean(Petal.Length)
 ```
 
 ### 1.7 summarize(): Resumir datos
