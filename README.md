@@ -128,7 +128,7 @@ iris %>% group_by(Species)
 Sintaxis: summarize(x, new_column = function(column))
 ```R
 # resumir datos (media) de una columna con datos agrupados
-iris %>% group_by(Species) %>% summarise(promedio = mean(Petal.Length))
+iris %>% group_by(Species) %>% summarise(promedio_Petal.Length = mean(Petal.Length))
 # resumir datos (media) de varias columnas
 iris %>%
   group_by(Species) %>%
@@ -138,10 +138,10 @@ iris %>%
     mean_PW = mean(Petal.Width),
     mean_SW = mean(Sepal.Width)
   )
+
 # si quisieramos resumir de todas las columnas con valores numéricos
 iris %>% group_by(Species) %>% summarise_if(is.numeric, mean)
-# resumir datos de todas las columnas con summarise_all
-iris %>% group_by(Species) %>% summarise_all(mean)
+
 ```
 
 ### 1.8 count(): Contar cuántas filas hay por cada columna
