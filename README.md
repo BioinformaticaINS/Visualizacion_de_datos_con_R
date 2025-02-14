@@ -56,11 +56,9 @@ Sintaxis: filter(x, condition)
 iris %>% filter(Sepal.Length > 7.6)
 iris %>% filter(Species == "versicolor")
 # filtrar filas en base a una condición con operador lógico
-iris %>% filter(Sepal.Length %in% 5) 
+iris %>% filter(Species %in% "setosa") 
 # filtrar filas que sean el opuesto a la condición con !
 iris %>% filter(!(Sepal.Length %in% 5)) 
-# filtrar filas que tengan un texto específico con grepl
-iris %>% filter(grepl("1.4", Petal.Length)) 
 # filtrar con varias condiciones usan & , |
 iris %>% filter(Sepal.Length > 5 & Petal.Length < 1.5)
 iris %>% filter(Sepal.Length > 5 | Petal.Length < 1.5)
