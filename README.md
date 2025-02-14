@@ -148,6 +148,8 @@ iris %>% group_by(Species) %>% summarise_if(is.numeric, mean)
 
 Sintaxis: count(x, column1, column2, ...)
 ```R
+# volvemos a coercionar a tibble para visualizar mejor los resultados
+iris <- as_tibble(iris)
 # Numero de filas en una columna
 iris %>% count(Species)
 iris %>% count(Petal.Length)
