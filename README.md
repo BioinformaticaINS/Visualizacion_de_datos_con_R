@@ -92,24 +92,27 @@ iris %>% arrange(Sepal.Length, Sepal.Width)
 
 Sintaxis: mutate(x, new_column = expression)
 ```R
+# Para visualizar mejor lo cambios vamos a coercionar a dataframe
+iris <- as.data.frame(iris)
 # crear una nueva columna
-iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width)
+iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width) %>% head()
 # crear varias columnas
 iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width,
-                 Area_Petal = Petal.Length * Petal.Width)
+                 Area_Petal = Petal.Length * Petal.Width) %>% head()
 # Modificar columnas existentes
-iris %>% mutate(Sepal.Length = Sepal.Length/5)
-# Modificar columnas, especificando que columnas usando across
-iris %>% mutate(across(c(Petal.Length, Petal.Width), log2))
-iris %>% mutate(across(!Species, log2))
+iris %>% mutate(Sepal.Length = Sepal.Length/5) %>% head()
 # Posición de las nuevas columnas usando .before y .after en mutate
-iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .before = Species)
-iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .after = Sepal.Width)
-iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .before = 1)
+iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, 
+                 .before = Species) %>% head()
+iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, 
+                 .after = Species) %>% head()
 # Mantener o eliminar columnas con .keep en mutate 
-iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .keep = "used")
-iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .keep = "unused")
-iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .keep = "none")
+iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width,
+                 .keep = "used") %>% head()
+iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width,
+                 .keep = "unused") %>% head()
+iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width,
+                 .keep = "none") %>% head()
 ```
 
 ### 1.6 group_by(): Para agrupar, util para hacer calculos en datos agrupados
