@@ -7,7 +7,7 @@
 ## Cargar todas las librerías necesarias con pacman
 
 ```R
-pacman::p_load(dplyr)
+pacman::p_load(dplyr, ggplot2)
 ```
 
 ## 1. FUNCIONES DE dyplr
