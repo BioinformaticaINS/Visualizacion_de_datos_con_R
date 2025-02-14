@@ -182,10 +182,6 @@ iris %>% distinct(Species)
 # .keep_all= TRUE mantiene todas las columnas del dataframe, no solo las seleccionadas, mientras que
 # FALSE (por defecto) conservan solo las columnas especificadas.
 iris %>% distinct(Species, .keep_all = TRUE)
-# comparemos con unique, duplicated de R base
-unique(iris$Species)
-duplicated(iris$Species)
-sum(duplicated(iris$Species))
 ```
 
 ### 1.11 join(): combinar dataframes
