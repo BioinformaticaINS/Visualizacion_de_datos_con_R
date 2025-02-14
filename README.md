@@ -48,7 +48,7 @@ iris %>% select(ends_with("Length"))
 iris %>% select(where(is.factor))
 ```
 
-### filter(): filtrar filas de un data frame en base a una o varias condiciones
+### 1.2 filter(): filtrar filas de un data frame en base a una o varias condiciones
 
 Sintaxis: filter(x, condition)
 ```R
@@ -66,7 +66,7 @@ iris %>% filter(Sepal.Length > 5 & Petal.Length < 1.5)
 iris %>% filter(Sepal.Length > 5 | Petal.Length < 1.5)
 ```
 
-### slice(): filtra filas basándose en su posición/índice.
+### 1.3 slice(): filtra filas basándose en su posición/índice.
 
 Sintaxis: slice(x, row1, row2, ...)
 ```R
@@ -78,7 +78,7 @@ iris %>% slice_head()
 iris %>% slice_tail()
 ```
 
-### arrange(): reordenar filas
+### 1.4 arrange(): reordenar filas
 
 Sintaxis: arrange(x, column1, column2, ..., .desc(column))
 ```R
@@ -91,7 +91,7 @@ iris %>% arrange(Sepal.Length)
 iris %>% arrange(Sepal.Length, Sepal.Width)
 ```
 
-### mutate(): Crear nuevas columnas, modifica las existentes
+### 1.5 mutate(): Crear nuevas columnas, modifica las existentes
 
 Sintaxis: mutate(x, new_column = expression)
 ```R
@@ -115,7 +115,7 @@ iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .keep = "unused")
 iris %>% mutate( Area_Sepal = Sepal.Length * Sepal.Width, .keep = "none")
 ```
 
-### group_by(): Para agrupar, util para hacer calculos en datos agrupados
+### 1.6 group_by(): Para agrupar, util para hacer calculos en datos agrupados
 
 Sintaxis: group_by(x, column1, column2, ...)
 ```R
@@ -125,7 +125,7 @@ iris %>% group_by(Species) %>% mean()
 iris %>% group_by(Species) %>% mean(Petal.Length)
 ```
 
-### summarize(): Resumir datos
+### 1.7 summarize(): Resumir datos
 
 Sintaxis: summarize(x, new_column = function(column))
 ```R
@@ -146,7 +146,7 @@ iris %>% group_by(Species) %>% summarise_if(is.numeric, mean)
 iris %>% group_by(Species) %>% summarise_all(mean)
 ```
 
-### count(): Contar cuántas filas hay por cada columna
+### 1.8 count(): Contar cuántas filas hay por cada columna
 
 Sintaxis: count(x, column1, column2, ...)
 ```R
@@ -155,7 +155,7 @@ iris %>% count(Species)
 iris %>% count(Petal.Length)
 ```
 
-### rename():  Cambiar el nombre de las columnas
+### 1.9 rename():  Cambiar el nombre de las columnas
 
 Sintaxis: rename(x, new_name = old_name)
 ```R
@@ -177,7 +177,7 @@ iris %>% rename_with(toupper, .cols = contains("Sep"))
 iris %>% rename_with(~paste0("NEW_", .))
 ```
 
-### distinct(): Eliminar filas duplicadas
+### 1.10 distinct(): Eliminar filas duplicadas
 
 Sintaxis: distinct(x, column1, column2, ...)
 ```R
@@ -192,7 +192,7 @@ duplicated(iris$Species)
 sum(duplicated(iris$Species))
 ```
 
-### join(): combinar dataframes
+### 1.11 join(): combinar dataframes
 
 Sintaxis: left_join(x, y, by = "column")
 ```R
@@ -215,7 +215,7 @@ inner_join(d1, d2, by = "ID")
 full_join(d1, d2, by = "ID")
 ```
 
-#### Utilizar select_if() con tipos de clase
+#### 1.12 Utilizar select_if() con tipos de clase
 
 Sintaxis: select_if(x, condition)
 ```R
