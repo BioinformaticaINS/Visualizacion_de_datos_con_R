@@ -160,21 +160,17 @@ iris %>% count(Petal.Length)
 Sintaxis: rename(x, new_name = old_name)
 ```R
 # Renombrar colocando el nombre de la columna a renombrar
-iris %>% rename(Longitud.Sepalo = Sepal.Length)
+iris %>% rename(longitud.sepalo = Sepal.Length)
 # Renombrar colocando la posición de la columna a renombrar
-iris %>% rename(Longitud.Sepalo = 1)
+iris %>% rename(ancho.sepalo = 2)
 # renombrar varias columnas
 iris %>% rename(
-  Longitud.Sepalo = Sepal.Length,
-  Anchura.Sepalo = Sepal.Width,
-  Largo.Petalo = Petal.Length,
-  Ancho.Petalo = Petal.Width)
+  longitud.sepalo = Sepal.Length,
+  ancho.sepalo = Sepal.Width,
+  longitud.petalo = Petal.Length,
+  ancho.petalo = Petal.Width)
 # renombrar columnas en base a una función con rename_with
 iris %>% rename_with(toupper)
-# renombrar columnas que tienen un texto especifico
-iris %>% rename_with(toupper, .cols = contains("Sep")) 
-# Agregar un prefijo a las columnas
-iris %>% rename_with(~paste0("NEW_", .))
 ```
 
 ### 1.10 distinct(): Eliminar filas duplicadas
