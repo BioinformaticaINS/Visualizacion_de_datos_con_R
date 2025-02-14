@@ -10,7 +10,7 @@
 pacman::p_load(dplyr)
 ```
 
-## 7. FUNCIONES DE dyplr
+## 1. FUNCIONES DE dyplr
 Recordemos que usamos %>% (pipe) nos sirve para concatenar funciones
 
 ```R
