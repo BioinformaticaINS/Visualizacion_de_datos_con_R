@@ -216,36 +216,32 @@ iris %>% select_if(is.numeric) %>% head()
 ```
 
 
-### 2. INTRODUCCIÓN A ggplot2 ----
+## 2. INTRODUCCIÓN A ggplot2 ----
 
-#### Base de un gráfico en ggplot2 ----
+### Base de un gráfico en ggplot2 ----
 
-##### Data
-
+Data
 ```R
 iris %>% ggplot()
 ```
 
-##### Aesthetics
-
+Aesthetics
 ```R
 iris %>% ggplot(aes(x = Sepal.Length, y = Sepal.Width))
 ```
 
-##### Geometries
-
+Geometries
 ```R
 iris %>% ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point()
 ```
 
 ### Data
+Tus datos, en un formato ordenado (tidy), proporcionarán los ingredientes para tu gráfico, puedes usar el paquete tydir
 
-#### Formato tydir
-
-##### Aesthetics
-
-```
+### Aesthetics
+Asigna las variables del conjunto de datos (valores de los datos) a las características visuales de los elementos gráficos (como los ejes, colores, formas, tamaños, etc.).
+```R
 # x, y: Variable a lo largo del eje X e Y
 # colour: Color de los elementos geométricos (geoms) según los datos
 # fill: Color de relleno del elemento geométrico
@@ -261,21 +257,10 @@ iris %>% ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
 ```R
 display.brewer.all()
 ```
-
-##### PALETAS DE COLOR PERSONALIZADAS
+Paletas de color personalizada
 
 ```R
 dcMarvelPalette <- c("#0476F2", "#EC1E24")
 goodBadPalette <- c("#A71D20", "#0DA751", "#818385")
 # http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
-```
-
-```R
-head(colors(), n = 20)
-colors()
-#Crear paleta manualmente
-Paleta <- c("cadetblue","coral","mediumspringgreen")
-#Paleta paletteer
-#https://r-charts.com/es/paletas-colores/
-#terrain.colors() heat.colors(), topo.colors(), cm.colors(), rainbow().
 ```
