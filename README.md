@@ -3,11 +3,20 @@
 - Título: dplyr y ggplot2
 - Autor: Dámaris Esquén
 - Fecha: 14/02/2025
+  
+## En bash instalar los siguientes programas
+
+```bash
+sudo apt update
+sudo apt ungrade
+sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev
+```
 
 ## Cargar todas las librerías necesarias con pacman
 
 ```R
-pacman::p_load(dplyr, ggplot2)
+pacman::p_load(dplyr, ggplot2, readxl, RColorBrewer, paletteer, cowplot)
+pacman::p_load(rnaturalearth, rnaturalearthdata, sf, viridis)
 ```
 
 ## 1. FUNCIONES DE dyplr
