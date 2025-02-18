@@ -13,7 +13,7 @@ sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev
 
 ## En RStudio, instalar y cargar todas las librerías necesarias con pacman
 ```R
-pacman::p_load(dplyr, ggplot2, readxl, RColorBrewer, paletteer, cowplot)
+pacman::p_load(dplyr, readr, ggplot2, readxl, RColorBrewer, paletteer, cowplot)
 pacman::p_load(rnaturalearth, rnaturalearthdata, sf, viridis)
 ```
 
