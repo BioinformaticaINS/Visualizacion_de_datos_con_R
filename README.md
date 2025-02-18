@@ -7,7 +7,7 @@
 ## En bash instalar los siguientes programas
 ```bash
 sudo apt update
-sudo apt ungrade
+sudo apt upgrade
 sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev
 ```
 
