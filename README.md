@@ -227,7 +227,7 @@ iris %>% select_if(is.numeric) %>% head()
 
 ### Base de un gráfico en ggplot2 
 
-#### 2.1. Data
+### 2.1. Data
 Los datos provienen de un ensayo controlado con placebo de interferón gamma en la enfermedad granulomatosa crónica (CGD). Contienen información sobre el tiempo hasta la aparición de infecciones graves observadas hasta el final del estudio para cada paciente.
 
 ```R
@@ -269,7 +269,7 @@ unique_cgd %>% ggplot(aes(x = height, y = weight))
 unique_cgd %>% ggplot(aes(x = height, y = weight)) +
   geom_point()
 ```
-#### 2.2. Geometries
+### 2.2. Geometries
 Para agregar geometrías que representen los datos en ggplot2, se utiliza geom_*(). Esta función permite representar gráficos mediante objetos geométricos. 
 Su sintaxis sigue el patrón geom_ * (seguido del nombre de la geometría en inglés). 
 
@@ -455,7 +455,7 @@ zz <- cgd %>% ggplot(aes(x = status, y = enum)) +
        #caption = "Datos: Fleming and Harrington, Counting Processes and Survival Analysis, appendix D.2.")  
 zz
 ```
-#### 2.4. Theme
+### 2.4. Theme
 Los temas son una forma de personalizar los componentes que no son datos de tu gráficos: títulos, etiquetas, fuentes, fondo, cuadrículas y leyendas. Los temas pueden ser utilizados para dar al grafico un aspecto personalizado. 
 
 ```R
@@ -475,7 +475,7 @@ aa
   aa + theme_test()
   aa + theme_classic()
 ```
-#### 2.5.  Facet
+### 2.5.  Facet
 Usado para dividir un gráfico en varios paneles o subgráficos basados en los valores de una o más variables. 
 
 ```R
@@ -495,7 +495,7 @@ bb
 bb + facet_grid(~ inherit)
 bb + facet_grid(inherit ~ sex)
 ```
-#### 2.6 Cowplot
+### 2.6 Cowplot
 No es parte de ggplot2, pero nos permite combinar múltiples gráficos generados por ggplot2 en una sola figura para facilitar la comparación visual. 
 
 ```R
